@@ -1,0 +1,127 @@
+.article-card[data-v-ac]{
+  position: relative;
+  display: flex;
+  margin: 32px 0;
+
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+    height: 1px;
+    background-color: $cloudy-100;
+  }
+
+  &:first-child{
+    margin-top: 16px;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -16px;
+      width: 100%;
+      height: 1px;
+      background-color: $cloudy-100;
+    }
+  }
+
+  // &:not(.small) {
+  //   .thumb-container img{
+  //     width: 100%;
+  //   }
+  // }
+
+  .thumb-container{
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    flex-basis: 40%;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @include until($widescreen){
+      min-width: 144px;
+      height: 128px;
+    }
+
+    @include until($desktop){
+      flex-basis: 30%;
+    }
+
+    @include until($tablet){
+      flex-basis: 30%;
+    }
+
+    @include mobile {
+      //flex-basis: 30%;
+      width: 144px;
+      height: 128px;
+    }
+    
+    img, amp-img {
+      display: block;
+      max-width: inherit;
+    }
+  }
+
+  .content-container{
+    flex-basis: 60%;
+    // flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 117px;
+    overflow-wrap: break-word;
+
+    .article-category{
+      @include until($desktop){
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .article-title{
+      line-height: 1;
+    }
+  }
+
+  &.small{
+    .thumb-container{
+      min-width: 100px;
+      height: 128px;
+
+      img, amp-img {
+        border-radius: 8px;
+      }
+    }
+
+    .article-description{
+      display: none;
+    }
+
+    .article-category{
+      margin-bottom: 0 !important;
+      font-size: 12px !important;
+    }
+    
+    .author{
+      font-size: 12px !important;
+      font-weight: 300;
+    }
+  }
+}
+
+.is-sidebar {
+  .thumb-container {
+    picture {
+      min-width: 100px;
+      
+      img {
+        width: 126px;
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+      }
+    }
+  }
+}

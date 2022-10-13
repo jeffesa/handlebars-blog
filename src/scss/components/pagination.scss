@@ -1,0 +1,10 @@
+.blog-pagination[data-v-bp]{
+  .link{
+    text-decoration: none;
+
+    &.is-active{
+      text-decoration: underline;
+      font-weight: 900;
+    }
+  }
+}

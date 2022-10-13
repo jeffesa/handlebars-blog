@@ -1,0 +1,25 @@
+.search-not-found {
+  flex-direction: column;
+
+  @include until($desktop) {
+    padding-top: 16px;
+    padding-bottom: 40px;
+    flex-direction: column-reverse;
+  }
+
+  .search-title {
+    padding-top: 48px;
+
+    @include until($desktop) {
+      padding-top: 0px;
+    }
+  }
+
+  .search-border {
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+    border-bottom: 8px solid $blue-regular;
+    left: 0;
+  }
+}

@@ -1,0 +1,17 @@
+<div data-v-al="" class="article-list">
+  <h2 class="article-list-title has-text-weight-bold has-text-cloud-heavier">Matérias mais recentes</h2>
+  <div class="articles-list">
+    {{> articleCard}}
+    {{> articleCard}}
+    {{> articleCard}}
+    {{> articleCard}}
+    {{> articleCard}}
+    {{> articleCard}}
+  </div>
+
+  {{#if pages}}
+    {{> pagination}}
+  {{else}}
+    <a class="link is-family-secondary">Ver mais matérias</a>
+  {{/if}}
+</div>

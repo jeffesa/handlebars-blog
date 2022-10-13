@@ -1,0 +1,39 @@
+.categories-bar[data-v-ctgbr]{
+  height: 48px;
+  margin: 0 auto;
+  max-width: 1280px;
+  .column{
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    line-height: 48px;
+    &:not(:last-child):after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 36px;
+      width: 1px;
+      background-color: #C3CFD5;
+    }
+  }
+  a{
+    font-weight: 500;
+    &:hover{
+      color: $blue-heavy !important;
+    }
+    &:active{
+      background-color: $blue-heavy !important;
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+  }
+  .bar-items {
+    .item {
+      min-width: 218px;
+      width: calc(100%/5);
+    }
+  }
+}

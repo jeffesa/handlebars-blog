@@ -1,0 +1,65 @@
+@import './productCard';
+
+.products-slider[data-v-pdrsldr]{
+  .is-inline-block{
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .title-container {
+    @include until($desktop) {
+      align-items: flex-start;
+    }
+  }
+  .custom-icon{
+    border-radius: 8px;
+
+    img, amp-img{
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .flickity-viewport{
+    @include until($desktop){
+      overflow: visible;
+    }
+  }
+
+  .flickity-prev-next-button {
+    &.next, &.previous {
+      background: transparent;
+    }
+
+    @include touch {
+      &.previous {
+        position: absolute;
+        left: 0px;
+      }
+      &.next {
+        position: absolute;
+        right: -10px;
+      }
+    }
+
+    &.flickity-button {
+      color: $white !important;
+    }
+  }
+
+  .flickity-page-dots{
+    bottom: -30px;
+
+    .dot{
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      background: #C5CED7;
+      opacity: 1;
+
+      &.is-selected{
+        background: #00AEEF;
+      }
+    }
+  }
+}

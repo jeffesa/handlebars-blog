@@ -1,0 +1,127 @@
+.form-lead {
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @include mobile {
+    padding: 10px 0;
+  }
+
+  .is-flex-grow {
+    flex-grow: 1;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 802px;
+    min-height: 493px;
+    background: $blue-regular;
+    // box-shadow: 0px 2px 8px rgba(35, 31, 32, 0.16);
+    border-radius: 8px;
+    padding: 26px 14px;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 16px 16px 39px;
+    }
+
+    .modal-close {
+      height: 32px;
+      max-height: 32px;
+      max-width: 32px;
+      min-height: 32px;
+      min-width: 32px;
+      width: 32px;
+      position: absolute!important;
+      top: 10px!important;
+      right: 10px!important;
+    }
+
+    .overflow {
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+      }
+    } 
+
+    .image {
+      @include mobile {
+        width: 192px;
+        padding-bottom: 18px;
+      }
+    }
+
+    .form {
+      width: 375px;
+      padding-left: 22px;
+      padding-right: 14px;
+
+      @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
+
+      .input {
+        margin-bottom: 10px;
+
+        &::placeholder{
+          color: $display-300;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .button {
+        width: 224px;
+        border-radius: 8px;
+
+        @include mobile {
+          display: block;
+          margin: auto;
+        }
+
+        strong {
+          font-weight: 500;
+        }
+      }
+
+      .information {
+        @include from($desktop) {
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        strong {
+          color: #E0E566 !important;
+        }
+      }
+
+      .has-message {
+        background: none !important;
+        display: none;
+
+        &.error {
+          color: $red-regular;
+          display: block;
+        }
+
+        &.success {
+          color: $success-500;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include until($desktop) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}

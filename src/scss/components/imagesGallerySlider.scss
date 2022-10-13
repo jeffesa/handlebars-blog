@@ -1,0 +1,145 @@
+.image-gallery-card[data-v-vdcrd]{
+  
+  @include from($widescreen) {
+    width: 596px;
+  }
+
+  @include until($widescreen) {
+    width: 396px;
+  }
+
+  @include until($desktop){
+    width: 300px;
+    min-height: 200px;
+  }
+
+  .thumb-container{
+    position: relative;
+  }
+
+  .play-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .image-gallery-thumb{
+    min-height: 200px;
+    display: block;
+    border-radius: 8px;
+
+    @include from($widescreen) {
+      height: 349px !important;
+    }
+
+    @include from($desktop) {
+      height: 231px;
+    }
+  
+    @include touch {
+      height: 200px;
+    }
+  }
+}
+.image-modal {
+  border-radius: 20px;
+}
+.images-gallery-slider {
+
+  @include until($desktop){
+    padding-bottom: 32px;
+    overflow-x: hidden;
+  }
+
+  .is-inline-block{
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  .custom-icon{
+    border-radius: 8px;
+  }
+
+  .image-modal {
+    border-radius: 20px;
+  }
+
+  .flickity-viewport{
+    @include until($desktop){
+      overflow: visible;
+    }
+  }
+
+  .flickity-page-dots{
+
+    .dot{
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      background: #C5CED7;
+      opacity: 1;
+
+      &.is-selected{
+        background: #00AEEF;
+      }
+    }
+  }
+  /* no circle */
+  .flickity-button {
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+  /* big previous & next buttons */
+  .flickity-prev-next-button {
+    width: 50px;
+    // height: 50px;
+  }
+
+  .next, .previous {
+    @include from($widescreen) {
+      top: calc(349px / 2) !important;
+    }
+
+    @include from($desktop) {
+      top: calc(231px / 2);
+    }
+  
+    @include touch {
+      top: calc(200px / 2);
+    }
+  }
+
+  /* icon color */
+  .flickity-button-icon {
+    fill: white;
+  }
+  /* hide disabled button */
+  .flickity-button:disabled {
+    display: none;
+  }
+
+  @include from($widescreen) {
+    .is-inline-block-desktop {
+      display: inline-block !important;
+    }
+  }
+
+  @include until($widescreen) {
+    .is-inline-block-desktop {
+      display: block !important;
+    }
+  }
+}
+
+.conetnt h1,h2,h3,h4,h5,h6{
+  font-weight: inherit !important;
+}
+
+.content ol {
+  margin-left: 0;
+}

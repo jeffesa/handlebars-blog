@@ -1,0 +1,35 @@
+.contained-field {
+  .input {
+    padding-top: calc(1.2em - #{$control-border-width});;
+    height: 3em;
+  }
+
+  .label {
+    position: absolute;
+    top: 50%;
+    color: $display-300;
+    transform: translateY(-50%);
+    transition: all 150ms ease-out;
+    transform-origin: left;
+    pointer-events: none;
+  }
+
+  .help {
+    height: 0.5em;
+  }
+
+  .input:focus + .label, .input:not(:placeholder-shown) + .label {
+    color: $primary;
+    transform: translateY(-100%) scale(0.7);
+  }
+
+  .input.is-danger + .label {
+    color: $danger;
+  }
+  .input.is-warning + .label {
+    color: $warning;
+  }
+  .input.is-success + .label {
+    color: $success;
+  }
+}

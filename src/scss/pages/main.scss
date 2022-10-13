@@ -1,0 +1,52 @@
+@import '../general/bulma';
+@import '../components/header';
+@import '../components/footer';
+@import '../components/articleList';
+@import '../components/sidebarList';
+@import '../components/socialSidebar';
+@import '../components/sidebarNewsletter';
+@import '../components/videosSlider';
+@import '../components/imagesGallerySlider';
+@import '../components/productsSlider';
+@import '../components/solutions';
+@import '../components/articleCard';
+@import '../components/pagination';
+@import '../components/editorialHeader';
+@import '../components/categoriesBar';
+@import '../components/homeHero';
+@import '../components/contactInfo';
+@import '../components/editorialMobile';
+@import '../components/articleContent';
+@import '../components/videoModal';
+@import '../components/containedField';
+@import '../components/searchNotFound';
+@import '../components/notification';
+@import '../components/lgpdModal';
+@import '../components/formModal';
+@import '../components/formLead';
+
+@import '../../../node_modules/flickity/css/flickity';
+
+.is-sidebar{
+  max-width: 390px;
+}
+
+header,main,footer{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  &.has-text-weight-bold {
+    font-weight: 700 !important;
+  }
+}
+
+.amp-form-submit-success {
+  > .contained-field {
+    display: none
+  }
+  > .button {
+    display: none
+  }
+}

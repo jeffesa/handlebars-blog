@@ -1,0 +1,61 @@
+{{#extend "layout"}}
+  {{#content "body"}}
+
+    {{> homeHero}}
+
+    <section class="">
+
+      <div class="is-hidden-desktop">
+        {{> editorialMobile}}
+      </div>
+
+      <div class="container p-t-24">
+        <div class="columns is-desktop">
+          <div class="column is-8-tablet">
+            {{> articleList}}
+          </div>
+          <div class="column is-4 is-sidebar is-hidden-touch p-t-24">
+            {{> solutions}}
+            {{> sidebarList}}
+            {{> socialSidebar}}
+            {{> sidebarNewsletter}}
+          </div>
+
+        </div>
+
+      </div>
+      <div class="has-background-display-lighter p-t-32 p-b-32">
+        <div class="container">
+          {{> videosSlider}}
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="columns is-desktop is-hidden-desktop">
+            <div class="column">
+              {{> articleList}}
+              {{> articleList}}
+              {{> articleList}}
+            </div>
+          </div>
+      </div>
+      <br>
+      <div class="has-background-display-lighter p-t-32 p-b-32">
+        <div class="container">
+          {{> productsSlider}}
+        </div>
+      </div>
+  
+      <div class="has-background-display-heavier is-hidden-desktop">
+        {{> sidebarNewsletter}}
+      </div>
+      
+      <div class="is-hidden-desktop">
+        {{> contactInfo}}
+      </div>
+      
+      
+    </section>
+
+  {{/content}}
+{{/extend}}

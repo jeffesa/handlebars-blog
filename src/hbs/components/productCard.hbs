@@ -1,0 +1,27 @@
+<div data-v-pdrcrd="" class="product-card {{color}} {{name}} is-flex m-t-16 m-b-16">
+  <div class="content">
+
+    <div class="title-mobile has-text-white is-hidden-desktop">
+      <strong>_Portfolio de soluções</strong>
+      encontre a sua.
+    </div>
+
+    <h3 class="m-t-8">
+      {{#if preName}}
+      <span class="product-prename has-text-weight-light is-inline-block-touch is-size-3-touch has-text-white m-t-24 m-b-8">{{preName}}</span>
+      {{/if}}
+      <span class="product-title has-text-weight-light is-inline-block-touch is-size-3-touch has-text-white is-size-1 m-t-16 m-b-8">{{name}}</span>
+    </h3>
+    
+    <div class="product-description has-text-weight-light has-text-white has-text-cloud-heavy is-hidden-touch">
+      {{{description}}}
+    </div>
+
+    <a href="#" class="link has-text-white is-size-8-touch">Saiba mais</a>
+  </div>
+
+  <div class="thumb-container">
+    <img src="{{productThumb}}" class="product-thumb">
+  </div>
+
+</div>

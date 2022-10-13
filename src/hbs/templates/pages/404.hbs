@@ -1,0 +1,47 @@
+{{#extend "layout"}}
+  {{#content "body"}}
+
+
+    <section class="">
+
+      <div class="container">
+
+        {{> searchNotFound}}
+
+        <div class="columns p-t-24">
+          <div class="column is-8-tablet">
+            {{> articleList}}
+          </div>
+          <div class="column is-4 is-sidebar is-hidden-touch p-t-24">
+            {{> solutions}}
+            {{> sidebarNewsletter}}
+            {{> socialSidebar}}
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <br>
+
+      <div class="is-hidden-desktop m-t-8">
+        {{> editorialMobile}}
+      </div>
+
+      <div class="has-background-display-lighter p-t-32 p-b-32">
+        <div class="container">
+          {{> productsSlider}}
+        </div>
+      </div>
+      {{> sidebarNewsletter large=true}}
+      
+      <div class="is-hidden-desktop">
+        {{> contactInfo}}
+      </div>
+      
+      
+    </section>
+
+  {{/content}}
+{{/extend}}

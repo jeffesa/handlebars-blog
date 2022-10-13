@@ -1,0 +1,100 @@
+.home-hero[data-v-hmhr]{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1280px;
+  .blue-box{
+    min-width: 469px;
+    max-width: 660px;
+    position: absolute;
+    left: 32px;
+    // top: 0;
+    border-radius: 8px;
+    min-width: 160px;
+    min-height: 230px;
+    opacity: .9;
+    transition: background-color 200ms ease-in-out;
+    margin-top: -8px;
+
+    @include until($desktop){
+      padding: 8px 16px !important;
+      max-width: 290px;
+      left: 0;
+      top: auto;
+      bottom: 24px;
+      border-radius: 0px 8px 8px 0px;
+      min-height: inherit;
+
+      >div{
+        margin-top: 0 !important;
+      }
+    }
+
+    &:hover {
+      background-color: $blue-regular !important;
+    }
+    
+    .box-title{
+      max-width: 445px;
+    }
+  }
+
+  .box-content-hero {
+    display: flex;
+    align-items: center;
+
+    .cover {
+      img, amp-img{
+        width: 100%;
+      }
+    }
+  }
+
+  @include from($desktop) {
+    .box-content-hero {
+      width: 100%;
+    }
+  }
+  .cover {
+    max-width: 1280px;
+    // min-height: 343px;
+
+    @include from($desktop) {
+      min-height: 343px;
+    }
+
+    @include touch {
+      min-height: auto;
+    }
+
+    @include mobile {
+      min-height: 343px;
+      max-width: 360px;
+
+      img, amp-img{
+        position: relative;
+        width: 360px;
+        height: 336px;
+      }
+    }
+  }
+
+  .link {
+    //position: absolute;
+    height: 100%;
+    width: calc(100% - 24px);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    //padding-bottom: 32px;
+    //margin-left: 24px;
+    @include until($desktop){
+      width: calc(100% - 16px);
+      padding-top: 8px;
+      // padding-bottom: 16px;
+      //margin-left: 16px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{{#extend "layout"}}
+  {{#content "body"}}
+
+    {{> homeHero}}
+
+    <section class="">
+
+      <div class="container p-t-32 p-b-32">
+
+        <div class="columns">
+          <div class="column is-8-tablet">
+            {{> articleList}}
+          </div>
+          <div class="column is-4 is-sidebar">
+            {{> solutions}}
+            {{> sidebarList}}
+            {{> socialSidebar}}
+            {{> sidebarNewsletter}}
+          </div>
+
+        </div>
+
+        {{> sidebarNewsletter large=true}}
+
+      </div>
+      <div class="has-background-display-lighter p-t-32 p-b-48 p-b-32-touch">
+        <div class="container">
+          {{> videosSlider}}
+        </div>
+      </div>
+
+      <br>
+
+      <div class="has-background-display-lighter p-t-32 p-b-32">
+        <div class="container">
+          {{> productsSlider}}
+        </div>
+      </div>
+      
+      
+    </section>
+
+  {{> notification}}
+
+  {{> lgpdModal}}
+
+  {{/content}}
+{{/extend}}

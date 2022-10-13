@@ -1,0 +1,102 @@
+$blue-heavy: #017CEB;
+$blue-heavy-invert: findColorInvert($blue-heavy);
+$blue-regular: #00AEEF;
+$blue-regular-invert: findColorInvert($blue-regular);
+
+$red-regular: #DC392A;
+$red-regular-invert: findColorInvert($red-regular);
+
+$cloudy-100: #EAEEF3;
+$cloudy-100-invert: findColorInvert($cloudy-100);
+$cloudy-200: #C5CED7;
+$cloudy-200-invert: findColorInvert($cloudy-200);
+$cloudy-300: #5A646E;
+$cloudy-300-invert: findColorInvert($cloudy-300);
+$cloudy-400: #353A40;
+$cloudy-400-invert: findColorInvert($cloudy-400);
+$cloudy-500: #231F20;
+$cloudy-500-invert: findColorInvert($cloudy-500);
+
+
+$display-100: #F7F7F7;
+$display-100-invert: findColorInvert($display-100);
+$display-200: #C3CFD5;
+$display-200-invert: findColorInvert($display-200);
+$display-300: #8A99A8;
+$display-300-invert: findColorInvert($display-300);
+$display-400: #5A646E;
+$display-400-invert: findColorInvert($display-400);
+$display-500: #353A40;
+$display-500-invert: findColorInvert($display-500);
+
+/* Sucesso/600 */
+$success-600: #005734;
+$success-600-invert: findColorInvert($success-600);
+/* Sucesso/500 */
+$success-500: #007B3E;
+$success-500-invert: findColorInvert($success-500);
+/* Sucesso/400 */
+$success-400: #009E55;
+$success-400-invert: findColorInvert($success-400);
+/* Sucesso/300 */
+$success-300: #43B977;
+$success-300-invert: findColorInvert($success-300);
+/* Sucesso/200 */
+$success-200: #96D5AE;
+$success-200-invert: findColorInvert($success-200);
+/* Sucesso/100 */
+$success-100: #E5F5EB;
+$success-100-invert: findColorInvert($success-100);
+
+/* Danger/100 */
+$danger-100: #FFDCDB;
+$danger-100-invert: findColorInvert($danger-100);
+
+$primary: $blue-heavy;
+$primary-invert: $blue-heavy-invert;
+
+$secondary: $blue-regular;
+$secondary-invert: $blue-regular-invert;
+
+$danger: $red-regular;
+$success: $success-400;
+
+$site-bg: $white;
+$site-bg-invert: findColorInvert($site-bg);
+
+$colors: mergeColorMaps((
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "info": ($info, $info-invert),
+  "success-300": ($success-300, $success-300-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert),
+  "primary": ($primary, $primary-invert),
+  "secondary": ($secondary, $secondary-invert),
+  "cloud-lighter": ($cloudy-100, $cloudy-100-invert),
+  "cloud-light": ($cloudy-200, $cloudy-200-invert),
+  "cloud-regular": ($cloudy-300, $cloudy-300-invert),
+  "cloud-heavy": ($cloudy-400, $cloudy-400-invert),
+  "cloud-heavier": ($cloudy-500, $cloudy-500-invert),
+  "display-lighter": ($display-100, $display-100-invert),
+  "display-light": ($display-200, $display-200-invert),
+  "display-regular": ($display-300, $display-300-invert),
+  "display-heavy": ($display-400, $display-400-invert),
+  "display-heavier": ($display-500, $display-500-invert),
+  "site-bg": ($site-bg, $site-bg-invert),
+),$custom-colors);
+
+$text: $cloudy-400;
+$text-strong: $cloudy-400;
+
+$link: $primary;
+$link-hover: $secondary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$footer-background-color: $white;
+$footer-color: $display-500;
+$footer-padding: 0rem 1.5rem 6rem;

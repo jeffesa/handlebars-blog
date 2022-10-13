@@ -1,0 +1,63 @@
+<div data-v-nwlsbr="" class="newsletter-sidebar has-background-display-heavier has-text-white p-24 m-b-24">
+  {{#if large }}
+    <h3 class="is-inline">
+      <strong class="is-size-3 is-inline-block">_Newsletter.</strong>
+      <p class="m-b-4 is-inline-block">Cadastre-se e receba as novidades!</p>
+    </h3>
+
+    <div class="m-b-16" submit-success>
+      <span class="has-text-weight-bold has-text-centered has-text-success-300">Email cadastrado com successo!</span>
+    </div>
+    <div class="m-b-16" submit-error>
+      <span class="has-text-weight-bold has-text-centered has-text-danger">Erro ao cadastrar o email, favor tente novamente.</span>
+    </div>
+
+    <div class="amp-form-submit-success columns m-t-4 p-8">
+      <div class="contained-field field column p-t-0 p-b-0 p-l-0">
+        <div class="control">
+          <input class="input is-medium is-size-6 is-family-secondary is-danger" type="text" placeholder=" ">
+          <label class="label m-l-8 is-family-secondary has-text-weight-normal" for="nameInput">Nome</label>
+        </div>
+        <p class="help m-l-12 is-family-secondary is-danger">This name is invalid</p>
+      </div>
+      <div class="contained-field field column p-t-0 p-b-0">
+        <div class="control">
+          <input class="input is-medium is-size-6 is-family-secondary is-danger" type="email" inputmode="email" placeholder=" ">
+          <label class="label m-l-8 is-family-secondary has-text-weight-normal" for="emailInput">Email</label>
+        </div>
+        <p class="help m-l-12 is-family-secondary is-danger">This name is invalid</p>
+      </div>
+      <div class="column p-t-0 p-b-0">
+        <button class="is-size-5 button is-primary is-fullwidth button is-loading" disabled><strong>Enviar</strong></button>
+      </div>
+    </div>
+  {{else}}
+    <h3>
+      <strong>_Newsletter</strong>
+      <p class="m-b-16">Cadastre-se e receba as novidades!</p>
+    </h3>
+
+    <div class="m-b-16" submit-success>
+      <span class="has-text-weight-bold has-text-centered has-text-success-300">Email cadastrado com successo!</span>
+    </div>
+    <div class="m-b-16" submit-error>
+      <span class="has-text-weight-bold has-text-centered has-text-danger">Erro ao cadastrar o email, favor tente novamente.</span>
+    </div>
+
+    <div class="contained-field field m-b-24">
+      <div class="control">
+        <input class="input is-medium is-size-6 is-family-secondary is-danger" type="text" placeholder=" ">
+        <label class="label m-l-8 is-family-secondary has-text-weight-normal" for="nameInput">Nome</label>
+      </div>
+      <p class="help m-l-12 is-family-secondary is-danger">This name is invalid</p>
+    </div>
+    <div class="contained-field field m-b-24">
+      <div class="control">
+        <input class="input is-medium is-size-6 is-family-secondary is-danger" type="email" inputmode="email" placeholder=" ">
+        <label class="label m-l-8 is-family-secondary has-text-weight-normal" for="emailInput">Email</label>
+      </div>
+      <p class="help m-l-12 is-family-secondary is-danger is-warning is-success is-hidden">This name is invalid</p>
+    </div>
+    <button class="button is-primary is-fullwidth"><strong>Enviar</strong></button>
+  {{/if}}
+</div>

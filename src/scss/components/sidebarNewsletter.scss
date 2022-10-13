@@ -1,0 +1,7 @@
+.newsletter-sidebar[data-v-nwlsbr]{
+  border-radius: 8px;
+
+  @include until($desktop){
+    border-radius: 0px;
+  }
+}

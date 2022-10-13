@@ -1,0 +1,54 @@
+.notification {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  color: $cloudy-300 !important;
+  box-shadow: 0px 2px 8px rgba(35, 31, 32, 0.16);
+
+  @include until($tablet) {
+    width: calc(100% - 32px);
+  }
+
+  &.is-success {
+    background: $success-100;
+  }
+
+  &.is-danger {
+    background: $danger-100;
+  }
+
+  > .delete {
+    top: auto;
+  }
+
+  .delete, .modal-close {
+    background-color: transparent;
+
+    &::before {
+      height: 2px;
+      width: 65%;
+    }
+
+    &::after {
+      height: 65%;
+      width: 2px;
+    }
+  }
+
+  .delete::before, .modal-close::before, .delete::after, .modal-close::after {
+    background-color: $cloudy-300;
+
+  }
+
+  &.is-top-right {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+  
+    @include from($desktop) {
+      max-width: 400px;
+      min-width: 400px;
+    }
+  }
+}

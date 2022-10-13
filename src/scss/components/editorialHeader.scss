@@ -1,0 +1,32 @@
+.editorial-header[data-v-edhdr]{
+  position: relative;
+  min-height: 80px;
+  color: white !important;
+  font-weight: 300 !important;
+
+  @include until($desktop){
+    min-height: 50px;
+    height: 50px;
+  }
+
+  .custom-icon{
+    display: inline-flex;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-8px);
+    @include until($desktop){
+      width: 48px;
+      height: 48px;
+      margin: 0 16px !important;
+      transform: translateY(-7px);
+    }
+  }
+
+  .is-inline-block{
+    vertical-align: super;
+  }
+
+}
